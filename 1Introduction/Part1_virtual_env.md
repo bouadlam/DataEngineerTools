@@ -176,3 +176,11 @@ Cette commande créera un kernel nommé "Python (DataEngineer)" que vous pourrez
 
 ## Suite
 Lorsque tout est bon du côté des environnements, vous pouvez passer à la suite en ouvrant le notebook `Part2_Git.ipynb`
+## Vérification finale sur Windows
+À la racine du dépôt :
+```powershell
+uv sync --locked --python 3.12
+uv run python -c "import sys; print(sys.version); print(sys.executable)"
+uv run jupyter notebook
+```
+Dans VS Code, installer les extensions Python et Jupyter de Microsoft, puis sélectionner le kernel `.venv`. Avec `uv run`, l'activation manuelle n'est pas nécessaire.
